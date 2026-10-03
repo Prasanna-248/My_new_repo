@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Nursery</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4fff4;
+}
+
+header{
+    background:#2e8b57;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+header h1{
+    font-size:36px;
+}
+
+header p{
+    margin-top:8px;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.section-title{
+    text-align:center;
+    color:#2e8b57;
+    margin-bottom:20px;
+}
+
+.plants{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    width:280px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.card-body h3{
+    color:#2e8b57;
+}
+
+.price{
+    font-size:20px;
+    color:#ff6b00;
+    margin:10px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#2e8b57;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1f6d45;
+}
+
+.cart{
+    margin-top:40px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.cart h2{
+    color:#2e8b57;
+}
+
+#cart-items{
+    margin-top:15px;
+}
+
+#total{
+    font-size:22px;
+    color:red;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+footer{
+    text-align:center;
+    background:#2e8b57;
+    color:white;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌿 Green Nursery</h1>
+    <p>Book Indoor & Outdoor Plants Online</p>
+</header>
+
+<div class="container">
+
+<h2 class="section-title">Popular Plants</h2>
+
+<div class="plants">
+
+    <div class="card">
+        <imgs://images.unsplash.com/photo-1466692476868-aef1dfb1e735
+        <div class="card-body">
+            <h3>Snake Plant (Indoor)</h3>
+            <p>Air purifier & easy maintenance.</p>
+            <div class="price">₹299</div>
+            <button onclick="addToCart('Snake Plant',299)">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-641-b39e6451bec6
+        <div class="card-body">
+            <h3>Money Plant (Indoor)</h3>
+            <p>Brings greenery and positivity.</p>
+            <div class="price">₹199</div>
+            <button onclick="addToCart('Money Plant',199)">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1 <div class="card-body">
+            <h3>Rose Plant (Outdoor)</h3>
+            <p>Beautiful flowering plant.</p>
+            <div class="price">₹399</div>
+            <button onclick="addToCart('Rose Plant',399)">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b <div class="card-body">
+            <h3>Hibiscus (Outdoor)</h3>
+            <p>Colorful flowers for gardens.</p>
+            <div class="price">₹349</div>
+            <button onclick="addToCart('Hibiscus',349)">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<div class="cart">
+    <h2>🛒 Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="total">Total: ₹0</p>
+</div>
+
+</div>
+
+<footer>
+    © 2026 Green Nursery | Fresh Plants Delivered to Your Doorstep 🌱
+</footer>
+
+<script>
+
+let total = 0;
+
+function addToCart(name, price){
+
+    const cartItems =
+    document.getElementById("cart-items");
+
+    let li = document.createElement("li");
+
+    li.textContent =
+    `${name} - ₹${price}`;
+
+    cartItems.appendChild(li);
+
+    total += price;
+
+    document.getElementById("total")
+    .innerText = `Total: ₹${total}`;
+}
+</script>
+
+</body>
+</html>
+``
